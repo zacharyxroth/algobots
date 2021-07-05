@@ -24,6 +24,11 @@ class FatFluorescentPinkTermite(QCAlgorithm):
         # create value to track QQQ's highest price for the trailing stop
         self.highestPrice = 0
         
+        # set benchmark
+        # set brokerage model
+        self.SetBenchmark("SPY")
+        self.SetBrokerageModel(BrokerageName.InteractiveBrokersBrokerage, AccountType.Margin)
+        
     def OnData(self, data):
     
     # check if 30 days have passed since last trade
