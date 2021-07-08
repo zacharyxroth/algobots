@@ -20,7 +20,7 @@ class UglyFluorescentYellowFlamingo(QCAlgorithm):
         self.SetBenchmark("SPY")
         self.SetBrokerageModel(BrokerageName.InteractiveBrokersBrokerage, AccountType.Margin)
         
-        # initialize custom simple moving average indicator using sma shortcut method
+        # initialize custom simple moving average indicator
         self.sma = CustomSimpleMovingAverage("CustomSMA", 30)
         self.RegisterIndicator(self.spy, self.sma, Resolution.Daily)
 
